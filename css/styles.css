@@ -1,0 +1,116 @@
+@import "_layout.css";
+@import "_about.css";
+@import "_blogpage.css";
+@import "_blogspecific.css";
+@import "_contact.css";
+@import "_themeswitcher.css";
+@import "_carousel.css";
+@import "_typograpy.css";
+@import "_imagesandcolors.css";
+@import "_navigation.css";
+@import "_mediaqueries.css";
+@import "_blogpostcard.css";
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root[data-theme="light"] {
+	--body-background: #fff;
+	--image-logo: url("/images/logo-light.png");
+
+	--desk-nav-color: #000;
+	--hover-shadow-color: 0.5px 0.5px 0.5px #3d3b3b;
+	--hover-shadow-color-hamburger: 0.5px 0.5px 0.5px #f5f1f1;
+	--copy-color: ;
+	--heading-color: ;
+
+	--header-background-color: #669c8580;
+	--search-background-color: #7dba7f80;
+	--footer-background-color: #669c8590;
+
+	--border-radius-header: 0 100px 100px 0;
+	--border-radius-search: 100px 0 0 100px;
+
+	--primary-color: #;
+	--secondary-color: #;
+	--accent-color: #;
+	--form-fill-color: #;
+	--sucess-color: #;
+	--error-color: #;
+
+	--background-body: #;
+	--button-background: #;
+	--border-color: #;
+	--copy-color: #;
+
+	--hamburger-background: #;
+	--hamburger-link-color: #;
+
+	--desk-nav-background: #;
+	--desk-nav-link-color: #;
+
+	--switch-bg: #f5f5f6;
+	--switch-circle-bg: #ffd371;
+	--switch-circle-pos: 0.4rem;
+	--icon-sun: #997f44;
+	--icon-moon: #b1b0b5;
+}
+
+:root[data-theme="dark"] {
+	--body-background: #222;
+	--main-background-image: url("/images/painted-solid-concrete-wall-textured-background.jpg");
+	--image-logo: url("/images/logo-dark.png");
+
+	--header-background-color: #669c8580;
+	--search-background-color: #7dba7f80;
+	--footer-background-color: #669c8590;
+
+	--desk-nav-color: #fff;
+	--hover-shadow-color: 0.5px 0.5px 0.5px #f5f1f1;
+	--hover-shadow-color-hamburger: 0.5px 0.5px 0.5px #f5f1f1;
+	--copy-color: ;
+	--heading-color: ;
+
+	--border-radius-header: 0 100px 100px 0;
+	--border-radius-search: 100px 0 0 100px;
+
+	--primary-color: #;
+	--secondary-color: #;
+	--accent-color: #;
+	--form-fill-color: #;
+	--sucess-color: #;
+	--error-color: #;
+
+	--background-body: #;
+	--button-background: #;
+	--border-color: #;
+	--copy-color: #;
+
+	--hamburger-background: #;
+	--hamburger-link-color: #;
+
+	--desk-nav-background: #;
+	--desk-nav-link-color: #;
+
+	--switch-bg: #2d2c35;
+	--switch-circle-bg: #7190ff;
+	--switch-circle-pos: 3.2rem;
+	--icon-sun: var(--muted-copy-color);
+	--icon-moon: #dce3ff;
+}
+:root {
+	/* ----- MOBILE MENU / HAMBURGER ----- */
+	--bar-width: 24px;
+	--bar-height: 3px;
+	--hamburger-gap: 3px;
+	--hamburger-margin: 10px;
+	--foreground: #3d3b3b;
+	--background: white;
+	--nav-link-color: white;
+	--animation-timing: 200ms ease-in-out;
+	--hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+	--border-radius-cards: 1rem 1rem 0rem 0rem;
+}

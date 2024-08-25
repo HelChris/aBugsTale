@@ -1,0 +1,40 @@
+#theme-switcher {
+	background-color: var(--switch-bg);
+	border-radius: 3rem;
+	display: flex;
+	align-items: center;
+	gap: 1.33rem;
+	cursor: pointer;
+	padding: 0.66rem;
+	margin: 0.5rem;
+	position: relative;
+	transform: var(--default-border-radius);
+	width: 6rem;
+}
+#theme-switcher::before {
+	content: "";
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	background-color: var(--switch-circle-bg);
+	border-radius: 3rem;
+	z-index: 0;
+	left: 0;
+	transform: translateX(var(--switch-circle-pos));
+	transition: var(--default-transition);
+}
+#theme-switcher svg {
+	z-index: 1;
+	transition: var(--default-transition);
+}
+.icon-sun {
+	fill: var(--icon-sun);
+}
+.icon-moon {
+	fill: var(--icon-moon);
+}
+#theme-switcher:focus-visible,
+#theme-switcher:focus-visible::before {
+	border: 1px solid var(--background);
+	box-shadow: 0 0 0 1px var(--foreground);
+}
