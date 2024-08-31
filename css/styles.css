@@ -2,7 +2,7 @@
 @import "_about.css";
 @import "_blogpage.css";
 @import "_blogspecific.css";
-@import "_contact.css";
+@import "_forms.css";
 @import "_themeswitcher.css";
 @import "_carousel.css";
 @import "_typograpy.css";
@@ -10,6 +10,7 @@
 @import "_navigation.css";
 @import "_mediaqueries.css";
 @import "_blogpostcard.css";
+@import "_containersandwrappers.css";
 
 *,
 *::after,
@@ -17,13 +18,41 @@
 	box-sizing: border-box;
 }
 
+body {
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* colors:
+	-----------nav-background-colors----------------
+	 --------light-green-background: #BAD6C4;
+	 --------dark-green-background: #669C85;
+	 -----------------------------------------------
+	 --------signal-green-accent-green--------------
+	 ---------pop-color-for-buttons: #7DBA7F;
+	 ------------------------------------------
+	 --------container-background-colors-trans------
+	 --------lightest-green-container: #EEF5EE;
+	 --------light-green-container: #BAD6C4;
+	 --------dark-green-container: #669C85;
+	 -----------------------------------------------
+*/
+
 :root[data-theme="light"] {
 	--body-background: #fff;
 	--image-logo: url("/images/logo-light.png");
-
-	--desk-nav-color: #000;
+	--header-nav-switch-background: #bad6c4;
+	--nav-background-color: #bad6c4;
+	--nav-a-color: #000;
 	--hover-shadow-color: 0.5px 0.5px 0.5px #3d3b3b;
-	--hover-shadow-color-hamburger: 0.5px 0.5px 0.5px #f5f1f1;
+	/* --dark-color: #000; */
+
+	/* --hover-shadow-color-hamburger: 0.5px 0.5px 0.5px #f5f1f1; */
 	--copy-color: ;
 	--heading-color: ;
 
@@ -64,12 +93,18 @@
 	--main-background-image: url("/images/painted-solid-concrete-wall-textured-background.jpg");
 	--image-logo: url("/images/logo-dark.png");
 
-	--header-background-color: #669c8580;
+	/* --header-background-color: #669c8580;
 	--search-background-color: #7dba7f80;
-	--footer-background-color: #669c8590;
+	--footer-background-color: #669c8590; */
 
-	--desk-nav-color: #fff;
-	--hover-shadow-color: 0.5px 0.5px 0.5px #f5f1f1;
+	--header-nav-switch-background: #669c85;
+	--nav-background-color: #669c85;
+	--nav-a-color: #000;
+	--hover-shadow-color: 0.5px 0.5px 0.5px #3d3b3b;
+
+	/* --nav-a-color: #fff;
+
+	--hover-shadow-color: 0.5px 0.5px 0.5px #f5f1f1; */
 	--hover-shadow-color-hamburger: 0.5px 0.5px 0.5px #f5f1f1;
 	--copy-color: ;
 	--heading-color: ;

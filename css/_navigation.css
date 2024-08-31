@@ -1,0 +1,43 @@
+.nav-and-theme-switcher {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+nav,
+#menu-checkbox {
+	display: none;
+}
+#menu-checkbox:checked ~ nav {
+	display: block;
+}
+.menu-icon {
+	margin: 0.5rem;
+}
+.close-icon {
+	display: none;
+}
+#menu-checkbox:checked + .menu-label .open-icon {
+	display: none;
+}
+#menu-checkbox:checked + .menu-label .close-icon {
+	display: inline;
+}
+#menu-checkbox:checked ~ nav {
+	display: block;
+}
+#menu-checkbox:checked ~ nav a {
+	display: block;
+	padding: 0.5rem 1rem;
+	color: var(--nav-a-color);
+}
+nav {
+	position: absolute;
+	background: var(--nav-background-color);
+	width: 100%;
+	height: 30vh;
+}
+nav a {
+	display: block;
+	padding: 0.5rem 1rem;
+	color: var(--nav-a-color);
+}

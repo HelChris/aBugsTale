@@ -1,0 +1,35 @@
+/* -----------------------------------*/
+/* MEDIUM VIEWPORT WIDTH 28-43 REM */
+/* ---------------------------------*/
+@media (min-width: 28rem) and (max-width: 43rem) {
+	.newsletter-form {
+		width: 100%;
+	}
+}
+
+/* ---------------------------*/
+/* LARGE VIEWPORT MIN. 44 REM */
+/* ---------------------------*/
+@media (min-width: 43rem) {
+	.about-us-container,
+	.newsletter-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.newsletter-wrapper {
+		align-items: center;
+		/* background-color: rgba(255, 255, 255, 0.547); */
+		padding: 1rem;
+		text-align: center;
+	}
+	.about-us-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 2rem;
+	}
+	.about-us-img {
+		max-width: 40vw;
+	}
+}

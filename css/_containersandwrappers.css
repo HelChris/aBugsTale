@@ -1,0 +1,17 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	border-radius: var(--border-radius-cards);
+	max-width: 70vw;
+	margin: 2rem auto;
+	padding: 0.5em;
+}
+.thumbnail-container {
+	display: flex;
+	justify-content: center;
+}
+.newsletter-wrapper {
+	padding: 2rem;
+}
