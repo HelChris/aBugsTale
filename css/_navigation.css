@@ -26,7 +26,7 @@ nav,
 	display: block;
 }
 #menu-checkbox:checked ~ nav a {
-	display: block;
+	display: block;	
 	padding: 0.5rem 1rem;
 	color: var(--nav-a-color);
 }

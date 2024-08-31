@@ -61,4 +61,35 @@ document.addEventListener("DOMContentLoaded", async () => {
 			}
 		});
 	}
+
+	// Event listener for the menu checkbox
+	const menuCheckbox = document.getElementById("menu-checkbox");
+	const mainNavigation = document.getElementById("main-navigation");
+
+	if (menuCheckbox) {
+		menuCheckbox.addEventListener("change", function () {
+			if (menuCheckbox.checked) {
+				menuCheckbox.setAttribute("aria-expanded", "true");
+			} else {
+				menuCheckbox.setAttribute("aria-expanded", "false");
+			}
+		});
+	}
+
+	// Event listeners for the SVG icons to toggle the menu
+	const menuIcons = document.querySelectorAll(".menu-icon");
+	menuIcons.forEach((icon) => {
+		icon.addEventListener("click", () => {
+			menuCheckbox.checked = !menuCheckbox.checked;
+			menuCheckbox.dispatchEvent(new Event("change"));
+		});
+
+		icon.addEventListener("keydown", function (event) {
+			if (event.key === "Enter" || event.key === " ") {
+				event.preventDefault();
+				menuCheckbox.checked = !menuCheckbox.checked;
+				menuCheckbox.dispatchEvent(new Event("change"));
+			}
+		});
+	});
 });
