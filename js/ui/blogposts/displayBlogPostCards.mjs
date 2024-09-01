@@ -26,12 +26,16 @@ export function displayBlogPostCard(post) {
 	excerpt.className = "blog-post-excerpt";
 	cardContent.appendChild(excerpt);
 
+	const cta = document.createElement("div");
+	cta.className = "call-to-action";
+	cardContent.appendChild(cta);
+
 	const readMore = document.createElement("a");
 	readMore.href = `story.html?id=${post.id}`;
 	readMore.className = "read-more-link";
 	readMore.textContent = "Read more";
 	readMore.setAttribute("aria-label", `Read more about ${post.title}`);
-	cardContent.appendChild(readMore);
+	cta.appendChild(readMore);
 
 	return div;
 }

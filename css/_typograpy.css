@@ -14,7 +14,7 @@ label {
 a {
 	text-decoration: none;
 }
-a:hover {
+nav a:hover {
 	text-decoration: underline;
 	text-shadow: var(--hover-shadow-color);
 }
@@ -37,18 +37,24 @@ a:hover {
 	font-weight: 400;
 	font-style: normal;
 }
+/* .blog-post-title {
+	font-weight: 500;
+}
+.blog-post-excerpt {
+	font-weight: 400;
+} */
 
-.h1-backdrop {
+/* .h1-backdrop {
 	backdrop-filter: blur(5px) contrast(50%) brightness(30%);
 	background-color: hsl(0 0% 100% / 0.4);
 	position: fixed;
 	margin: auto;
 	inset: 0;
-}
+} */
 
-.thumbnail-h5 {
+/* .thumbnail-h5 {
 	font-weight: 100;
-}
+} */
 .newsletter-h2 {
 	text-transform: capitalize;
 	text-wrap: pretty;
