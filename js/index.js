@@ -70,26 +70,33 @@ document.addEventListener("DOMContentLoaded", async () => {
 		menuCheckbox.addEventListener("change", function () {
 			if (menuCheckbox.checked) {
 				menuCheckbox.setAttribute("aria-expanded", "true");
+				//move focus to the  first focusable element in the menu
+				const firstFocusableElement = mainNavigation.querySelector("a");
+				if (firstFocusableElement) {
+					firstFocusableElement.focus();
+				}
 			} else {
 				menuCheckbox.setAttribute("aria-expanded", "false");
+				//move focus back to toggle button
+				menuCheckbox.focus();
 			}
 		});
 	}
 
-	// Event listeners for the SVG icons to toggle the menu
-	const menuIcons = document.querySelectorAll(".menu-icon");
-	menuIcons.forEach((icon) => {
-		icon.addEventListener("click", () => {
+	// Event listeners for the label to toggle the menu
+	const menuLabel = document.querySelector(".menu-label");
+	if (menuLabel) {
+		menuLabel.addEvevntListener("click", () => {
 			menuCheckbox.checked = !menuCheckbox.checked;
 			menuCheckbox.dispatchEvent(new Event("change"));
 		});
 
-		icon.addEventListener("keydown", function (event) {
+		menuLabel.addEventListener("keydown", function (event) {
 			if (event.key === "Enter" || event.key === " ") {
 				event.preventDefault();
 				menuCheckbox.checked = !menuCheckbox.checked;
 				menuCheckbox.dispatchEvent(new Event("change"));
 			}
 		});
-	});
+	}
 });
