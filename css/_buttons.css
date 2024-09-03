@@ -1,0 +1,17 @@
+.button {
+	padding: 0.5rem;
+	margin-top: 10px;
+	color: var(--button-font-color);
+	background-color: var(--accent-color);
+	border: 1px solid var(--postcard-border);
+	max-width: fit-content;
+	border-radius: var(--border-radius);
+	transition: all 0.25s;
+}
+.button:hover {
+	letter-spacing: 4px;
+}
+.top-button {
+  display: flex;
+  align-content: center;
+}

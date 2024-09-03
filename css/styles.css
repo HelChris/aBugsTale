@@ -1,10 +1,7 @@
-@import "_layout.css";
-@import "_about.css";
-@import "_blogpage.css";
-@import "_blogspecific.css";
+@import "_buttons.css";
 @import "_forms.css";
 @import "_themeswitcher.css";
-@import "_carousel.css";
+/* @import "_carousel.css"; */
 @import "_typograpy.css";
 @import "_imagesandcolors.css";
 @import "_navigation.css";
@@ -61,8 +58,8 @@ a {
 	--button-font-color: #000;
 	--accent-color: #7dba7f;
 
-	--copy-color: ;
-	--heading-color: ;
+	--h-color: #000;
+	--copy-color: #000;
 
 	--header-background-color: #669c8580;
 	--search-background-color: #7dba7f80;
@@ -112,8 +109,8 @@ a {
 	--button-font-color: #000;
 	--accent-color: #669c85;
 
-	--copy-color: ;
-	--heading-color: ;
+	--h-color: #fff;
+	--copy-color: #fff;
 
 	--border-radius-header: 0 100px 100px 0;
 	--border-radius-search: 100px 0 0 100px;

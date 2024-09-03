@@ -10,9 +10,16 @@ a {
 }
 label {
 	font-family: "montserrat", sans-serif;
+	font-size: 18px;
+}
+input {
+	font-size: 16px;
 }
 a {
 	text-decoration: none;
+}
+p {
+	font-size: 18px;
 }
 nav a:hover {
 	text-decoration: underline;
@@ -36,6 +43,11 @@ nav a:hover {
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
+}
+.page-h1 {
+	display: flex;
+	justify-content: center;
+	color: var(--h-color);
 }
 /* .blog-post-title {
 	font-weight: 500;

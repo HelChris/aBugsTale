@@ -2,45 +2,36 @@ import { switchTheme } from "./ui/shared/switchTheme.mjs";
 import { applySavedTheme } from "./ui/shared/switchTheme.mjs";
 import { updateLogo } from "./ui/shared/switchLogoToTheme.mjs";
 
-import { fetchBlogPostInfo } from "/js/events/fetchBlogPostInfo.mjs";
-import { displayBlogPostCard } from "/js/ui/blogposts/displayBlogPostCards.mjs";
-import { displaySinglePost } from "/js/ui/blogposts/displaySinglePost.mjs";
-import {} from "/js/ui/shared/switchLogoToTheme.mjs";
-import { displayCarousel } from "./ui/blogposts/displayCarousel.mjs";
+import { fetchAndDisplayBlogPosts } from "./events/fetchAndDisplayBlogPosts.mjs";
 
+// what JS to run on which page
 const { pathname } = location;
 console.log(pathname);
 
 switch (pathname) {
 	case "/":
 	case "/index.html":
-		displayCarousel();
+		// displayCarousel();
 		// display carousel();
 		// display blogpostCards();
 		break;
 	case "/story.html":
-		displaySinglePost();
+		// displaySinglePost();
 		break;
 	case "/stories.html":
+		fetchAndDisplayBlogPosts();
 		// display blogpostcards();
 		break;
 }
 
+//
+// EventListeners to update theme and logo on the pages
+//
 document.addEventListener("DOMContentLoaded", async () => {
 	// Apply saved theme
 	applySavedTheme();
 	updateLogo();
 
-	// Fetch and display blog posts
-	const url = "/wp-json/wp/v2/posts?per_page=13&_embed"; // Your API endpoint
-	const blogPosts = await fetchBlogPostInfo(url);
-	const postsContainer = document.getElementById("posts-container");
-	if (postsContainer) {
-		blogPosts.forEach((post) => {
-			const card = displayBlogPostCard(post);
-			postsContainer.appendChild(card);
-		});
-	}
 
 	// Event listener for the theme switcher
 	const themeSwitcher = document.querySelector("#theme-switcher");
@@ -86,7 +77,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	// Event listeners for the label to toggle the menu
 	const menuLabel = document.querySelector(".menu-label");
 	if (menuLabel) {
-		menuLabel.addEvevntListener("click", () => {
+		menuLabel.addEventListener("click", () => {
 			menuCheckbox.checked = !menuCheckbox.checked;
 			menuCheckbox.dispatchEvent(new Event("change"));
 		});

@@ -2,11 +2,11 @@
 	justify-content: center;
 	margin: 1rem;
 }
-.post-grid-container {
+/* .post-grid-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(10rem, 30rem));
 	justify-content: center;
-}
+} */
 .post-card-wrapper {
 	width: 250px;
 	border: var(--postcard-border);

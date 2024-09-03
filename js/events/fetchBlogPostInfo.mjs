@@ -16,7 +16,8 @@ export async function fetchBlogPostInfo(url) {
 				.replace(/^\n+/, "") // removes newline characters at the beginning
 				.replace(/<\/?[^\>]+>/g, "") // removes HTML tags
 				.replace(/&#8217;/g, "'") //replace HTML entity with apostrophe
-				.replace(/\n+$/, ""), //removes newline characters at the end
+				.replace(/\n+$/, "") //removes newline characters at the end
+				.replace(/&#8211;/, ""), //removes the dashes
 			content: post.content.rendered
 				.replace(/^\n+/, "") // removes newline characters at the beginning
 				.replace(/<\/?[^\>]+>/g, "") // removes HTML tags

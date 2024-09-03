@@ -1,10 +1,10 @@
 export function displayBlogPostCard(post) {
-	const div = document.createElement("div");
-	div.className = "post-card-wrapper";
+	const blogPostCard = document.createElement("div");
+	blogPostCard.className = "post-card-wrapper";
 
 	const cardContent = document.createElement("div");
 	cardContent.className = "post-card-content";
-	div.appendChild(cardContent);
+	blogPostCard.appendChild(cardContent);
 
 	const imageLink = document.createElement("a");
 	imageLink.href = `story.html?id=${post.id}`;
@@ -37,5 +37,5 @@ export function displayBlogPostCard(post) {
 	readMore.setAttribute("aria-label", `Read more about ${post.title}`);
 	cta.appendChild(readMore);
 
-	return div;
+	 return blogPostCard;
 }
