@@ -49,6 +49,11 @@ nav a:hover {
 	justify-content: center;
 	color: var(--h-color);
 }
+
+
+.single-post-story::first-letter {
+	text-transform: uppercase;
+}
 /* .blog-post-title {
 	font-weight: 500;
 }
