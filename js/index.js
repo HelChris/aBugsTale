@@ -10,15 +10,18 @@ console.log(pathname);
 
 switch (pathname) {
 	case "/":
+	case "/index":
 	case "/index.html":
 		// displayCarousel();
 		// display carousel();
 		// display blogpostCards();
 		break;
+	case "/story":
 	case "/story.html":
 		// displaySinglePost();
 		break;
 	case "/stories":
+	case "/stories.html":
 		fetchAndDisplayBlogPosts();
 		break;
 }
