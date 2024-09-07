@@ -1,8 +1,8 @@
-import { switchTheme } from "./ui/shared/switchTheme.mjs";
-import { applySavedTheme } from "./ui/shared/switchTheme.mjs";
-import { updateLogo } from "./ui/shared/switchLogoToTheme.mjs";
+import { switchTheme } from "/js/ui/shared/switchTheme.mjs";
+import { applySavedTheme } from "/js/ui/shared/switchTheme.mjs";
+import { updateLogo } from "/js/ui/shared/switchLogoToTheme.mjs";
 
-import { fetchAndDisplayBlogPosts } from "./events/fetchAndDisplayBlogPosts.mjs";
+import { fetchAndDisplayBlogPosts } from "/js/events/fetchAndDisplayBlogPosts.mjs";
 
 // what JS to run on which page
 const { pathname } = location;
@@ -18,9 +18,8 @@ switch (pathname) {
 	case "/story.html":
 		// displaySinglePost();
 		break;
-	case "/stories.html":
+	case "/stories":
 		fetchAndDisplayBlogPosts();
-		// display blogpostcards();
 		break;
 }
 
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 	// Apply saved theme
 	applySavedTheme();
 	updateLogo();
-
 
 	// Event listener for the theme switcher
 	const themeSwitcher = document.querySelector("#theme-switcher");
