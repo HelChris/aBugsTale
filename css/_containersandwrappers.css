@@ -12,6 +12,22 @@
 	display: flex;
 	justify-content: center;
 }
+.newsletter-container {
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+}
 .newsletter-wrapper {
 	padding: 2rem;
+}
+.footer-wrapper {
+	background-color: var(--footer-background);
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 0.5rem;
+	align-items: center;
+	text-wrap: pretty;
+	width: 100%;
 }

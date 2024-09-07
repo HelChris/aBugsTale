@@ -21,7 +21,8 @@ a {
 p {
 	font-size: 18px;
 }
-nav a:hover {
+nav a:hover,
+footer a:hover {
 	text-decoration: underline;
 	text-shadow: var(--hover-shadow-color);
 }

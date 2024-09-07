@@ -27,6 +27,17 @@ a {
 	color: inherit;
 	text-decoration: inherit;
 }
+html {
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+footer {
+	margin-top: auto;
+}
 
 /* colors:
 	-----------nav-background-colors----------------
@@ -48,8 +59,12 @@ a {
 	--image-logo: url("/images/logo-light.png");
 	--header-nav-switch-background: #bad6c4;
 	--nav-background-color: #bad6c4;
+	--footer-background: #669c85;
 	--nav-a-color: #000;
 	--hover-shadow-color: 0.3px 0.3px 0.3px #3d3b3b;
+
+	--container-background: rgba(95, 134, 99, 0.3);
+	--newsletter-container-background: rgba(255, 255, 255, 0.3);
 
 	--postcard-border: 1px solid #000;
 	--border-radius: 8px;
@@ -62,9 +77,9 @@ a {
 	--h-color: #000;
 	--copy-color: #000;
 
-	--header-background-color: #669c8580;
+	/* --header-background-color: #669c8580;
 	--search-background-color: #7dba7f80;
-	--footer-background-color: #669c8590;
+	--footer-background-color: #669c8590; */
 
 	--border-radius-header: 0 100px 100px 0;
 	--border-radius-search: 100px 0 0 100px;
@@ -98,8 +113,12 @@ a {
 
 	--header-nav-switch-background: #669c85;
 	--nav-background-color: #669c85;
+	--footer-background: #669c85;
 	--nav-a-color: #000;
 	--hover-shadow-color: 0.5px 0.5px 0.5px #3d3b3b;
+
+	--container-background: #669c8580;
+	--newsletter-container-background: #669c8550;
 
 	--postcard-border: 1px solid #000;
 	--border-radius: 8px;
