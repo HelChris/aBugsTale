@@ -65,7 +65,7 @@ footer {
 	--hover-shadow-color: 0.3px 0.3px 0.3px #3d3b3b;
 
 	--container-background: rgba(95, 134, 99, 0.3);
-	--newsletter-container-background: rgba(255, 255, 255, 0.3);
+	/* --newsletter-container-background: rgba(255, 255, 255, 0.3); */
 
 	--story-background: #eef5ee;
 	--newsletter-background: #eef5ee;
@@ -111,7 +111,8 @@ footer {
 	--hover-shadow-color: 0.5px 0.5px 0.5px #3d3b3b;
 
 	--container-background: #669c8580;
-	--newsletter-container-background: #669c8550;
+	/* --newsletter-container-background: #669c8550; */
+	--newsletter-background: #669c8550;;
 	--story-background: hsla(129, 11%, 35%, 0.3);
 
 	--postcard-border: 1px solid #000;
