@@ -9,19 +9,28 @@ export async function createModalImage(imgElement) {
 	// create modal image
 	const modalImg = document.createElement("img");
 	modalImg.className = "modal-content";
+	modalImg.alt = ""; // Set initial alt attribute to an empty string
 	modal.appendChild(modalImg);
+
+	// create modal alt text container
+	const modalAltText = document.createElement("div");
+	modalAltText.className = "modal-alt-text";
+	modal.appendChild(modalAltText);
 
 	// event listener to open modal
 	imgElement.addEventListener("click", () => {
 		modal.style.display = "block";
 		modalImg.src = imgElement.src;
 		modalImg.alt = imgElement.alt;
+		modalAltText.textContent = imgElement.alt;
 	});
 
 	// event listener to close modal
 	modal.addEventListener("click", (event) => {
 		if (event.target === modal) {
 			modal.style.display = "none";
+			modalImg.alt = ""; // Reset alt attribute to an empty string
+			modalAltText.textContent = ""; // Clear the alt text content
 		}
 	});
 }
@@ -32,33 +41,33 @@ export function displaySinglePost(post) {
 	singleStoryPage.id = "single-story-page";
 	singleStoryPage.className = "single-story-page";
 
-	//story wrapper (around the story itself)
+	// story wrapper (around the story itself)
 	const singleStoryWrapper = document.createElement("div");
 	singleStoryWrapper.className = "single-story-wrapper single-post-story";
 
-	//story image
+	// story image
 	const img = document.createElement("img");
 	img.src = post.featuredImage;
 	img.alt = post.title;
 	img.className = "story-image";
 	singleStoryWrapper.appendChild(img);
 
-	//create modal image
+	// create modal image
 	createModalImage(img);
 
-	//title
+	// title
 	const title = document.createElement("h1");
 	title.textContent = post.title;
 	title.className = "story-title";
 	singleStoryWrapper.appendChild(title);
 
-	//author
+	// author
 	const author = document.createElement("p");
 	author.textContent = `By author: ${post.author}`;
 	author.className = "story-author";
 	singleStoryWrapper.appendChild(author);
 
-	//date
+	// date
 	const date = document.createElement("p");
 	date.className = "date";
 	const formattedDate = new Date(post.date)
@@ -67,11 +76,11 @@ export function displaySinglePost(post) {
 	date.textContent = `Posted: ${formattedDate}`;
 	singleStoryWrapper.appendChild(date);
 
-	//storywrapper w/background
+	// story wrapper w/background
 	const storyWrapper = document.createElement("div");
 	storyWrapper.classList.add("story-wrapper", "story-background");
 
-	//render storycontent with paragraphs
+	// render story content with paragraphs
 	const contentWrapper = document.createElement("div");
 	if (Array.isArray(post.content)) {
 		post.content.forEach((paragraph) => {
@@ -81,23 +90,23 @@ export function displaySinglePost(post) {
 			contentWrapper.appendChild(paragraphElement);
 		});
 	} else {
-		console.error("Post content is not an array:", post.conent);
+		console.error("Post content is not an array:", post.content);
 	}
 	storyWrapper.appendChild(contentWrapper);
 
-	//append story-wrapper to single-story-wrapper
+	// append story-wrapper to single-story-wrapper
 	singleStoryWrapper.appendChild(storyWrapper);
 
-	//link button
+	// link button
 	const linkButton = document.createElement("a");
 	linkButton.href = "/stories.html";
 	linkButton.className = "button";
 	linkButton.textContent = "Back to Stories";
 	singleStoryWrapper.appendChild(linkButton);
 
-	//append single story-wrapper to main container
+	// append single story-wrapper to main container
 	singleStoryPage.appendChild(singleStoryWrapper);
 
-	//return main container
+	// return main container
 	return singleStoryPage;
 }
