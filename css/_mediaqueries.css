@@ -23,6 +23,11 @@
 		display: flex;
 		justify-content: space-around;
 	}
+	.newsletter-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
 	.about-us-wrapper {
 		display: flex;
 		flex-direction: column;
