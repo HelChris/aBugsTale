@@ -13,6 +13,7 @@ switch (pathname) {
 	case "/":
 	case "/index":
 	case "/index.html":
+		fetchAndDisplayBlogPosts();
 		break;
 	case "/story":
 	case "/story.html":

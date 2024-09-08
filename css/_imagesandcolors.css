@@ -32,42 +32,71 @@ body {
 	margin: 0 auto;
 	padding-top: 1rem;
 }
+.img-link-about,
+.img-link-contact,
+.img-link-stories {
+	display: flex;
+	width: 12.5rem;
+	height: 12.5rem;
+	padding: 0rem 2.1875rem;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+  margin: 1rem;
+
+}
+.img-link-about {
+	background: url(/images/forest-small.jpg) lightgray 50% / cover no-repeat;
+}
+.img-link-stories {
+	background: url(/images/forest-book-small.jpg) lightgray 50% / cover no-repeat;
+}
+.img-link-contact {
+	background: url(/images/close-up-moss-nature-small.jpg) lightgray 50% / cover
+		no-repeat;
+}
+
 .story-background {
 	background-color: var(--story-background);
 }
 
 /* ******* MODAL ******* */
 .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      padding-top: 100px; /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    }
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
 
-    .modal-content {
-      margin: auto;
-      display: block;
-      width: 80%;
-      max-width: 700px;
-    }
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+}
 
-    .modal-content, .modal {
-      animation-name: zoom;
-      animation-duration: 0.6s;
-    }
+.modal-content,
+.modal {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
 
-    @keyframes zoom {
-      from {transform: scale(0)}
-      to {transform: scale(1)}
-    }
+@keyframes zoom {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
 
-    .modal-content:hover {
-      cursor: pointer;
-    }
+.modal-content:hover {
+	cursor: pointer;
+}
