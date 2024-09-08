@@ -1,6 +1,6 @@
 .button {
 	padding: 0.5rem;
-	margin-top: 10px;
+	margin: 10px;
 	color: var(--button-font-color);
 	background-color: var(--accent-color);
 	border: 1px solid var(--postcard-border);

@@ -48,7 +48,7 @@ export function displaySinglePost(post) {
 
 	//storywrapper w/background
 	const storyWrapper = document.createElement("div");
-	storyWrapper.className = "story-wrapper story-background";
+	storyWrapper.classList.add("story-wrapper", "story-background");
 
 	//the story itself
 	const storyParagraph = document.createElement("p");

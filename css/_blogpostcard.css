@@ -84,7 +84,7 @@
 	}
 	.button-container {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(0rem, 60rem));
+		grid-template-columns: repeat(auto-fit, minmax(10rem, 80rem));
 		justify-content: center;
 		justify-items: center;
 	}

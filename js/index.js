@@ -2,7 +2,7 @@ import { switchTheme } from "/js/ui/shared/switchTheme.mjs";
 import { applySavedTheme } from "/js/ui/shared/switchTheme.mjs";
 import { updateLogo } from "/js/ui/shared/switchLogoToTheme.mjs";
 
-// import { fetchAndDisplaySinglePost } from "/js/events/fetchAndDisplaySinglePost.mjs";
+import { fetchAndDisplaySinglePost } from "/js/events/fetchAndDisplaySinglePost.mjs";
 import { fetchAndDisplayBlogPosts } from "/js/events/fetchAndDisplayBlogPosts.mjs";
 
 // what JS to run on which page
@@ -16,7 +16,7 @@ switch (pathname) {
 		break;
 	case "/story":
 	case "/story.html":
-		// fetchAndDisplaySinglePost();
+		fetchAndDisplaySinglePost();
 		break;
 	case "/stories":
 	case "/stories.html":

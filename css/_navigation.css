@@ -45,6 +45,9 @@ nav a {
 	padding: 0.5rem 1rem;
 	color: var(--nav-a-color);
 }
+.footer-navigation {
+	padding-left: 1rem;
+}
 
 /* ******** SMALL SCREEN ******** */
 @media (max-width: 28rem) {

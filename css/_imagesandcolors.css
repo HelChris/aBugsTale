@@ -1,16 +1,6 @@
 body {
 	background-color: var(--body-background);
 }
-.logo {
-	max-width: 285px;
-	display: flex;
-	margin: 0 auto;
-}
-.about-us-img {
-	max-width: 50vw;
-	border-radius: 1rem 0 1rem 0;
-	margin: 1rem;
-}
 .nav-and-theme-switcher {
 	background-color: var(--header-nav-switch-background);
 }
@@ -22,4 +12,26 @@ body {
 }
 .newsletter-container {
 	background-color: var(--newsletter-container-background);
+}
+.page-h1 {
+	color: var(--h-color);
+}
+.logo {
+	max-width: 285px;
+	display: flex;
+	margin: 0 auto;
+}
+.about-us-img {
+	max-width: 50vw;
+	border-radius: 1rem 0 1rem 0;
+	margin: 1rem;
+}
+.story-image {
+	max-width: 90%;
+	display: flex;
+	margin: 0 auto;
+	padding-top: 1rem;
+}
+.story-background {
+	background-color: var(--lightest-green-container);
 }

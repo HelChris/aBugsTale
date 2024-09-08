@@ -2,6 +2,7 @@
 @import "_forms.css";
 @import "_themeswitcher.css";
 /* @import "_carousel.css"; */
+@import "_loading.css";
 @import "_typograpy.css";
 @import "_imagesandcolors.css";
 @import "_navigation.css";
@@ -65,6 +66,8 @@ footer {
 
 	--container-background: rgba(95, 134, 99, 0.3);
 	--newsletter-container-background: rgba(255, 255, 255, 0.3);
+
+	--lightest-green-container: #EEF5EE;
 
 	--postcard-border: 1px solid #000;
 	--border-radius: 8px;
