@@ -78,7 +78,17 @@ footer a:hover {
 	padding-top: 1rem;
 }
 .the-story::first-letter {
+	font-family: "Cherry Swash", serif;
 	font-weight: bold;
 	font-size: 80px;
 	line-height: 0;
+}
+.story-title,
+.story-author,
+.date,
+.the-story {
+	color: var(--font-color);
+}
+.the-story {
+	font-family: "montserrat", sans-serif;
 }
