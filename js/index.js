@@ -58,30 +58,39 @@ document.addEventListener("DOMContentLoaded", async () => {
 	const mainNavigation = document.getElementById("main-navigation");
 
 	if (menuCheckbox) {
+		// Add change event listener for accessibility
 		menuCheckbox.addEventListener("change", function () {
 			if (menuCheckbox.checked) {
 				menuCheckbox.setAttribute("aria-expanded", "true");
-				//move focus to the  first focusable element in the menu
+				// Move focus to first focusable element
 				const firstFocusableElement = mainNavigation.querySelector("a");
 				if (firstFocusableElement) {
 					firstFocusableElement.focus();
 				}
 			} else {
 				menuCheckbox.setAttribute("aria-expanded", "false");
-				//move focus back to toggle button
+				// Move focus back to toggle button
 				menuCheckbox.focus();
+			}
+		});
+
+		// Add keyboard event listener for accessibility
+		menuCheckbox.addEventListener("keydown", function (event) {
+			// Check if Enter or Space is pressed
+			if (event.key === "Enter" || event.key === " ") {
+				// Prevent the default action to avoid scrolling when pressing space
+				event.preventDefault();
+				// Toggle the checkbox state
+				menuCheckbox.checked = !menuCheckbox.checked;
+				// Dispatch the change event to trigger the change listener
+				menuCheckbox.dispatchEvent(new Event("change"));
 			}
 		});
 	}
 
-	// Event listeners for the label to toggle the menu
+	// Event listener for the label to toggle the menu
 	const menuLabel = document.querySelector(".menu-label");
 	if (menuLabel) {
-		menuLabel.addEventListener("click", () => {
-			menuCheckbox.checked = !menuCheckbox.checked;
-			menuCheckbox.dispatchEvent(new Event("change"));
-		});
-
 		menuLabel.addEventListener("keydown", function (event) {
 			if (event.key === "Enter" || event.key === " ") {
 				event.preventDefault();
@@ -90,4 +99,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 			}
 		});
 	}
+
+	// Handle focus styles
+	function handleFirstTab(event) {
+		if (event.key === "Tab") {
+			document.body.classList.add("user-is-tabbing");
+			window.removeEventListener("keydown", handleFirstTab);
+			window.addEventListener("mousedown", handleMouseDownOnce);
+		}
+	}
+
+	function handleMouseDownOnce() {
+		document.body.classList.remove("user-is-tabbing");
+		window.removeEventListener("mousedown", handleMouseDownOnce);
+		window.addEventListener("keydown", handleFirstTab);
+	}
+
+	window.addEventListener("keydown", handleFirstTab);
 });

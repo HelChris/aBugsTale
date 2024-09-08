@@ -17,6 +17,11 @@ nav,
 .menu-icon {
 	margin: 0.5rem;
 	cursor: pointer;
+	outline: none;
+}
+/* Show outline only when using keyboard navigation */
+.user-is-tabbing .menu-icon:focus {
+	outline: 2px solid #000; /* or any other style you prefer */
 }
 .close-icon {
 	display: none;

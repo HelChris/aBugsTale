@@ -85,21 +85,6 @@ export function displaySinglePost(post) {
 	}
 	storyWrapper.appendChild(contentWrapper);
 
-	// //render the story content with paragraphs
-	// const contentWrapper = document.createElement("div");
-	// fetchBlogPostInfo.content.forEach((paragraph) => {
-	// 	const paragraphElement = document.createElement("p");
-	// 	paragraphElement.innerHTML = paragraph;
-	// 	contentWrapper.appendChild(paragraphElement);
-	// });
-	// storyWrapper.appendChild(contentWrapper);
-
-	// //the story itself
-	// const storyParagraph = document.createElement("p");
-	// storyParagraph.className = "the-story";
-	// storyParagraph.textContent = post.content;
-	// storyWrapper.appendChild(storyParagraph);
-
 	//append story-wrapper to single-story-wrapper
 	singleStoryWrapper.appendChild(storyWrapper);
 
