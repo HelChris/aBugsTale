@@ -1,18 +1,34 @@
+export async function createModalImage(imgElement) {
+	// modal container
+	const modal = document.createElement("div");
+	modal.className = "modal";
+	document.body.appendChild(modal);
+
+	// create modal image
+	const modalImg = document.createElement("img");
+	modalImg.className = "modal-content";
+	modal.appendChild(modalImg);
+
+	// event listener to open modal
+	imgElement.addEventListener("click", () => {
+		modal.style.display = "block";
+		modalImg.src = imgElement.src;
+		modalImg.alt = imgElement.alt;
+	});
+
+	// event listener to close modal
+	modal.addEventListener("click", (event) => {
+		if (event.target === modal) {
+			modal.style.display = "none";
+		}
+	});
+}
+
 export function displaySinglePost(post) {
 	// main container
 	const singleStoryPage = document.createElement("div");
 	singleStoryPage.id = "single-story-page";
 	singleStoryPage.className = "single-story-page";
-
-	// //spinner
-	// const spinner = document.createElement("div");
-	// spinner.className = "spinner";
-	// singleStoryPage.appendChild(spinner);
-
-	// //loading text
-	// const loadingText = document.createElement("p");
-	// loadingText.textContent = "Loading..";
-	// singleStoryPage.appendChild(loadingText);
 
 	//story wrapper (around the story itself)
 	const singleStoryWrapper = document.createElement("div");
@@ -24,6 +40,9 @@ export function displaySinglePost(post) {
 	img.alt = post.title;
 	img.className = "story-image";
 	singleStoryWrapper.appendChild(img);
+
+	//create modal image
+	createModalImage(img);
 
 	//title
 	const title = document.createElement("h1");

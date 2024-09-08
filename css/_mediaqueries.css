@@ -30,4 +30,10 @@
 	.about-us-img {
 		max-width: 40vw;
 	}
+	.story-image {
+		max-width: 50%;
+	}
+	.the-story {
+		max-width: 50%;
+	}
 }

@@ -6,8 +6,6 @@ export async function fetchAndDisplaySinglePost() {
 	const params = new URLSearchParams(location);
 	const idCall = params.get("id");
 
-	console.log("idCall:", idCall);
-
 	if (!idCall) {
 		document.location.href = "/";
 		return;
@@ -24,11 +22,17 @@ export async function fetchAndDisplaySinglePost() {
 		//find the post with matching id
 		const post = posts.find((p) => p.id === parseInt(idCall, 10));
 
+		//change the title of the document according to the post
+		const postTitle = post.title;
+		document.title = `${postTitle} - A Bug's Tale`;
+
+		//update the URL w/post title
+		const newUrl = `story.html?title=${encodeURIComponent(postTitle)}`;
+		history.pushState(null, document.title, newUrl);
+
 		if (!post) {
 			throw new Error("Post not found");
 		}
-
-		console.log("fetched post:", post);
 
 		//use displaysinglepost to ceate post HTML:
 		const singlePostElement = displaySinglePost(post);
