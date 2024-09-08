@@ -61,6 +61,7 @@ footer a:hover {
 }
 .story-paragraph {
 	padding: 1rem;
+	color: var(--story-paragraph-color);
 }
 .story-paragraph:first-child::first-letter {
 	font-family: "Cherry Swash", serif;

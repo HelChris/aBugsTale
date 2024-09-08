@@ -114,6 +114,7 @@ footer {
 	/* --newsletter-container-background: #669c8550; */
 	--newsletter-background: #669c8550;;
 	--story-background: hsla(129, 11%, 35%, 0.3);
+	--story-paragraph-color: #e1e1e1;
 
 	--postcard-border: 1px solid #000;
 	--border-radius: 8px;
