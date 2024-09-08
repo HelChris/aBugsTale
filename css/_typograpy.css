@@ -59,27 +59,24 @@ footer a:hover {
 	display: flex;
 	justify-content: center;
 }
-.single-post-story::first-letter {
-	text-transform: uppercase;
+.story-paragraph {
+	padding: 1rem;
+}
+.story-paragraph:first-child::first-letter {
+	font-family: "Cherry Swash", serif;
+	font-weight: bold;
+	font-size: 80px;
+	line-height: 0;
 }
 .form-h1 {
 	color: var(--font-color);
 }
-/* .h1-backdrop {
-	backdrop-filter: blur(5px) contrast(50%) brightness(30%);
-	background-color: hsl(0 0% 100% / 0.4);
-	position: fixed;
-	margin: auto;
-	inset: 0;
-} */
- .h2-img-link {
+.h2-img-link {
 	backdrop-filter: blur(5px) contrast(50%) brightness(30%);
 	background-color: hsl(0, 0%, 100%);
-	/* position: 0 auto; */
-	/* margin: 0 auto; */
 	display: flex;
 	justify-content: center;
- }
+}
 
 /* .thumbnail-h5 {
 	font-weight: 100;

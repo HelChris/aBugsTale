@@ -1,3 +1,5 @@
+import { fetchBlogPostInfo } from "/js/events/fetchBlogPostInfo.mjs";
+
 export async function createModalImage(imgElement) {
 	// modal container
 	const modal = document.createElement("div");
@@ -32,7 +34,7 @@ export function displaySinglePost(post) {
 
 	//story wrapper (around the story itself)
 	const singleStoryWrapper = document.createElement("div");
-	singleStoryWrapper.className = "single-story-wrapper";
+	singleStoryWrapper.className = "single-story-wrapper single-post-story";
 
 	//story image
 	const img = document.createElement("img");
@@ -69,11 +71,34 @@ export function displaySinglePost(post) {
 	const storyWrapper = document.createElement("div");
 	storyWrapper.classList.add("story-wrapper", "story-background");
 
-	//the story itself
-	const storyParagraph = document.createElement("p");
-	storyParagraph.className = "the-story";
-	storyParagraph.textContent = post.content;
-	storyWrapper.appendChild(storyParagraph);
+	//render storycontent with paragraphs
+	const contentWrapper = document.createElement("div");
+	if (Array.isArray(post.content)) {
+		post.content.forEach((paragraph) => {
+			const paragraphElement = document.createElement("p");
+			paragraphElement.innerHTML = paragraph;
+			paragraphElement.classList.add("story-paragraph");
+			contentWrapper.appendChild(paragraphElement);
+		});
+	} else {
+		console.error("Post content is not an array:", post.conent);
+	}
+	storyWrapper.appendChild(contentWrapper);
+
+	// //render the story content with paragraphs
+	// const contentWrapper = document.createElement("div");
+	// fetchBlogPostInfo.content.forEach((paragraph) => {
+	// 	const paragraphElement = document.createElement("p");
+	// 	paragraphElement.innerHTML = paragraph;
+	// 	contentWrapper.appendChild(paragraphElement);
+	// });
+	// storyWrapper.appendChild(contentWrapper);
+
+	// //the story itself
+	// const storyParagraph = document.createElement("p");
+	// storyParagraph.className = "the-story";
+	// storyParagraph.textContent = post.content;
+	// storyWrapper.appendChild(storyParagraph);
 
 	//append story-wrapper to single-story-wrapper
 	singleStoryWrapper.appendChild(storyWrapper);
