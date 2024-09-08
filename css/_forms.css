@@ -1,5 +1,6 @@
 .form {
 	padding: 0.3rem 0.5rem;
+	color: var(--font-color);
 }
 .form-input {
 	width: 100%;

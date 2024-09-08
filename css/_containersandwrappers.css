@@ -17,7 +17,7 @@
 	flex-direction: column;
 	align-content: center;
 	align-items: center;
-	border-radius: var(--border-radius-cards);
+	border-radius: var(--border-radius);
 	max-width: 70vw;
 	margin: 2rem auto;
 	padding: 0.5em;
@@ -31,6 +31,7 @@
 	width: 100%;
 	margin: 0 auto;
 	display: flex;
+	color: var(--font-color);
 }
 .newsletter-wrapper {
 	padding: 2rem;
@@ -52,5 +53,5 @@
 	gap: 0.5rem;
 }
 .story-wrapper {
-padding: 2rem;
+	padding: 2rem;
 }

@@ -18,8 +18,10 @@
 	}
 	.newsletter-wrapper {
 		align-items: center;
-		padding: 1rem;
 		text-align: center;
+		gap: 2rem;
+		display: flex;
+		justify-content: space-around;
 	}
 	.about-us-wrapper {
 		display: flex;

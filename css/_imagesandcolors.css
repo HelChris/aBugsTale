@@ -33,7 +33,7 @@ body {
 	padding-top: 1rem;
 }
 .story-background {
-	background-color: var(--lightest-green-container);
+	background-color: var(--story-background);
 }
 
 /* ******* MODAL ******* */
