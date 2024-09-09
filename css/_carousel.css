@@ -1,11 +1,15 @@
 .carousel-container {
 	margin: 1rem;
+	padding: 1rem;
 }
 .card-list .card-item {
 	list-style: none;
+	max-width: fit-content;
+	height: 420px;
 }
 .card-list .card-item .card-link {
-	width: 400px;
+	width: 350px;
+	height: 420px;
 	display: block;
 	background: #fff;
 	padding: 18px;

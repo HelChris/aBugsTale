@@ -10,6 +10,7 @@
 	position: relative;
 	transform: var(--default-border-radius);
 	width: 6rem;
+	z-index: 1000;
 }
 #theme-switcher::before {
 	content: "";
