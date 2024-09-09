@@ -24,10 +24,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-
+  <!-- Linking SwiperJS CSS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="css/styles.css" rel="stylesheet" />
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script src="js/index.js" type="module"></script>
+  <script type="module"> import { swiper } from './js/events/carouselControls.mjs'; </script>
   <title>A Bug's Tale - Home</title>
 
 </head>
@@ -77,18 +79,17 @@
   </header>
   <main>
     <h1 class="page-h1 index-h1">Latest posts</h1>
-    <p>CAROUSEL HERE</p>
-    <section id="carousel-section" class="carousel-section">
-      <!-- <h1>The latest stories:</h1>
-            <div class="carousel-view">
-              <button id="prev-btn" class="prev-btn"></button>
-              <div id="item-list" class="item-list"></div>
-                <li>blogpostcard1</li>
-                <li>blogpostcard2</li>
-                <li>blogpostcard3</li>
-              <button id="next-btn" class="next-btn"></button>
-            </div> -->
-    </section>
+    <div class="carousel-container swiper">
+      <div class="card-wrapper">
+        <ul class="card-list swiper-wrapper">
+          <!-- Slides will be dynamically generated here -->
+        </ul>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <!-- <div class="blogposts" id="carousel-posts"> -->
     <div class="index-img-links-container">
       <a href="about.html"
         aria-label="picture-link to our story page. Picture of the sun shining through the forest trees"
@@ -113,7 +114,7 @@
           <form>
             <div class="form">
               <label for="name" required>Name:</label>
-              <input id="name" name="name" required / />
+              <input id="name" name="name" required />
             </div>
             <div class="form">
               <label for="email">Email:</label>

@@ -1,16 +1,33 @@
-// // get objects (nxt-btn, prev-btn, itemlist) from the document and implement item scrolling with eventlistener listening for click AND keyboard navigation for accessibility
+// carouselControls.mjs
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-// export function initCarouselControls() {
-// 	const prev = document.getElementById("prev-btn");
-// 	const next = document.getElementById("next-btn");
-// 	const list = document.getElementById("item-list");
-// 	const itemWidth = 150;
-// 	const padding = 10;
+export const swiper = new Swiper(".card-wrapper", {
+	loop: true,
+  spaceBetween: 10,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
 
-// 	prev.addEventListener("click", () => {
-// 		list.scrollLeft -= itemWidth + padding;
-// 	});
-// 	next.addEventListener("click", () => {
-// 		list.scrollLeft += itemWidth + padding;
-// 	});
-// }
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+
+	breakpoints: {
+		0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+		},
+		768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+		},
+		1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+		},
+	},
+});

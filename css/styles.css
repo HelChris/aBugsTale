@@ -1,7 +1,7 @@
 @import "_buttons.css";
 @import "_forms.css";
 @import "_themeswitcher.css";
-/* @import "_carousel.css"; */
+@import "_carousel.css";
 @import "_loading.css";
 @import "_typograpy.css";
 @import "_imagesandcolors.css";
@@ -69,6 +69,7 @@ footer {
 
 	--story-background: #eef5ee;
 	--newsletter-background: #eef5ee;
+	--box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 
 	--postcard-border: 1px solid #000;
 	--border-radius: 8px;
