@@ -55,9 +55,13 @@ footer a:hover {
 	font-weight: 400;
 	font-style: normal;
 }
-.page-h1 {
+.page-h1,
+.index-h1 {
 	display: flex;
 	justify-content: center;
+}
+.index-h1 {
+	padding-top: 1rem;
 }
 .story-paragraph {
 	padding: 1rem;

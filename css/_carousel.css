@@ -1,6 +1,5 @@
 .carousel-container {
 	margin: 1rem;
-	padding: 1rem;
 }
 .card-list .card-item {
 	list-style: none;
@@ -20,7 +19,7 @@
 	transition: 0.2s ease;
 }
 .card-list .card-item .card-link:hover {
-	border-color: #5372f0;
+	border-color: #205c20;
 }
 
 .card-list .card-link .card-image {
@@ -54,11 +53,11 @@
 	margin: 30px 0 5px;
 	background: none;
 	cursor: pointer;
-	border: 2px solid #5372f0;
+	border: 2px solid #205c20;
 	transform: rotate(-45deg);
 	transition: 0.4s ease;
 }
 .card-list .card-link:hover .card-button {
 	color: #fff;
-	background: #5372f0;
+	background: #205c20;
 }
