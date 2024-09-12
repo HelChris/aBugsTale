@@ -9,7 +9,7 @@ export async function createModalImage(imgElement) {
 	// create modal image
 	const modalImg = document.createElement("img");
 	modalImg.className = "modal-content";
-	modalImg.alt = ""; // Set initial alt attribute to an empty string
+	modalImg.alt = "";
 	modal.appendChild(modalImg);
 
 	// create modal alt text container

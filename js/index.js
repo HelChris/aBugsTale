@@ -6,7 +6,6 @@ import { fetchAndDisplaySinglePost } from "/js/events/fetchAndDisplaySinglePost.
 import { fetchAndDisplayBlogPosts } from "/js/events/fetchAndDisplayBlogPosts.mjs";
 
 import { createCarouselCards } from "/js/ui/blogposts/displayCarouselCards.mjs";
-import { swiper } from "/js/events/carouselControls.mjs";
 
 // what JS to run on which page
 const { pathname } = location;
@@ -17,9 +16,7 @@ switch (pathname) {
 	case "/index":
 	case "/index.html":
 		// Call function to create carousel cards
-		createCarouselCards().then(() => {
-			swiper.update();
-		});
+		createCarouselCards();
 		fetchAndDisplayBlogPosts();
 		break;
 	case "/story":
