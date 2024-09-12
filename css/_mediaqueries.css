@@ -5,6 +5,9 @@
 	.newsletter-form {
 		width: 100%;
 	}
+	.linebreak-large-screen {
+		display: none;
+	}
 }
 /* ---------------------------*/
 /* LARGE VIEWPORT MIN. 44 REM */
@@ -36,6 +39,9 @@
 	}
 	.about-us-img {
 		max-width: 40vw;
+	}
+	.linebreak-large-screen {
+		display: block;
 	}
 	.story-image {
 		max-width: 50%;

@@ -1,35 +1,50 @@
 .carousel-container {
-	margin: 1rem;
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
 }
-.card-list .card-item {
-	list-style: none;
-	max-width: fit-content;
-	height: 420px;
+.card-list {
+	display: flex;
+	transition: transform 0.5s ease;
 }
-.card-list .card-item .card-link {
-	width: 350px;
-	height: 420px;
-	display: block;
+.card-item {
+	flex: 0 0 auto;
+	width: 100%;
+	height: auto;
+	margin: 10px;
 	background: #fff;
-	padding: 18px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	list-style: none;
+}
+.card-link {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	padding: 10px;
 	border-radius: 12px;
 	text-decoration: none;
 	border: 2px solid transparent;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
 	transition: 0.2s ease;
+	box-sizing: border-box;
 }
-.card-list .card-item .card-link:hover {
+.card-link:hover {
 	border-color: #205c20;
 }
-
-.card-list .card-link .card-image {
+.card-image {
 	width: 100%;
-	aspect-ratio: 16/9;
+	height: 180px;
 	object-fit: cover;
-	border-radius: 10px;
+	border-radius: var(--border-radius-image);
+	padding-bottom: 0.5rem;
 }
-
-.card-list .card-link .badge {
+.badge {
 	color: #205c20;
 	padding: 8px 16px;
 	font-size: 0.95rem;
@@ -39,25 +54,98 @@
 	width: fit-content;
 	border-radius: 50px;
 }
-
-.card-list .card-link .card-title {
-	font-size: 1.19rem;
-	color: #000;
+.card-title {
+	font-size: 1rem;
 	font-weight: 600;
+	margin: 5px 0;
+	flex-grow: 1;
+	text-align: center;
 }
-
-.card-list .card-link .card-button {
-	height: 35px;
-	width: 35px;
-	border-radius: 50%;
-	margin: 30px 0 5px;
-	background: none;
-	cursor: pointer;
-	border: 2px solid #205c20;
-	transform: rotate(-45deg);
-	transition: 0.4s ease;
+.card-p {
+	flex-grow: 6;
+	margin: 5px 0;
+	align-self: flex-start;
+	text-wrap: pretty;
+	text-align: center;
 }
-.card-list .card-link:hover .card-button {
+.carousel-button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.5);
 	color: #fff;
-	background: #205c20;
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+}
+.carousel-button.prev {
+	left: 10px;
+}
+.carousel-button.next {
+	right: 10px;
+}
+/* -----------------------------------*/
+/* MEDIUM VIEWPORT WIDTH 28-43 REM */
+/* ---------------------------------*/
+@media (min-width: 28rem) and (max-width: 43rem) {
+	.card-item {
+		width: 45%;
+		height: 400px;
+	}
+	.card-link {
+		padding: 15px;
+	}
+	.card-image {
+		height: 200px;
+	}
+	.card-title {
+		font-size: 1.1rem;
+		margin: 10px 0;
+	}
+	.card-p {
+		font-size: 1rem;
+		margin: 10px 0;
+	}
+	.badge {
+		font-size: 0.9rem;
+		padding: 8px 12px;
+		margin: 12px 0;
+	}
+	.carousel-button {
+		padding: 8px;
+	}
+}
+/* ---------------------------*/
+/* LARGE VIEWPORT MIN. 44 REM */
+/* ---------------------------*/
+@media (min-width: 44rem) {
+	.carousel-container {
+		max-width: 1200px;
+	}
+	.card-item {
+		width: 300px;
+		height: 450px;
+	}
+	.card-link {
+		padding: 18px;
+	}
+	.card-image {
+		height: 220px;
+	}
+	.card-title {
+		font-size: 1.19rem;
+		margin: 10px 0;
+	}
+	.card-p {
+		font-size: 1rem;
+		margin: 10px 0;
+	}
+	.badge {
+		font-size: 0.95rem;
+		padding: 8px 16px;
+		margin: 16px 0 18px;
+	}
+	.carousel-button {
+		padding: 10px;
+	}
 }

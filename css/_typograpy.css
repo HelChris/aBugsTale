@@ -74,6 +74,9 @@ footer a:hover {
 	padding: 0.5rem;
 	text-align: center;
 }
+.linebreak-large-screen {
+	display: none;
+}
 .story-paragraph {
 	padding: 1rem;
 	color: var(--story-paragraph-color);

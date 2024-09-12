@@ -17,7 +17,6 @@ switch (pathname) {
 	case "/index.html":
 		// Call function to create carousel cards
 		createCarouselCards();
-		fetchAndDisplayBlogPosts();
 		break;
 	case "/story":
 	case "/story.html":
