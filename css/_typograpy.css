@@ -66,6 +66,7 @@ footer a:hover {
 }
 .about-h {
 	padding-bottom: 0.5rem;
+	margin-top: 0;
 }
 .about-p {
 	text-wrap: pretty;
