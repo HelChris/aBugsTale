@@ -4,7 +4,7 @@
 }
 .post-card-wrapper {
 	width: 250px;
-	height: 420px;
+	height: 450px;
 	border: var(--postcard-border);
 	border-radius: var(--border-radius);
 	background-color: var(--postcard-background);
@@ -61,4 +61,3 @@
 	flex-direction: column;
 	align-items: center;
 }
-

@@ -56,12 +56,22 @@ footer a:hover {
 	font-style: normal;
 }
 .page-h1,
-.index-h1 {
+.index-h1,
+.about-h {
 	display: flex;
 	justify-content: center;
 }
 .index-h1 {
 	padding-top: 1rem;
+}
+.about-h {
+	padding-bottom: 0.5rem;
+}
+.about-p {
+	text-wrap: pretty;
+	align-content: center;
+	padding: 0.5rem;
+	text-align: center;
 }
 .story-paragraph {
 	padding: 1rem;
@@ -82,10 +92,6 @@ footer a:hover {
 	display: flex;
 	justify-content: center;
 }
-
-/* .thumbnail-h5 {
-	font-weight: 100;
-} */
 .newsletter-h2 {
 	text-transform: capitalize;
 	text-wrap: pretty;
@@ -116,4 +122,14 @@ footer a:hover {
 }
 .the-story {
 	font-family: "montserrat", sans-serif;
+}
+.blog-post-title {
+	height: 65px;
+	display: flex;
+	align-items: center;
+}
+.blog-post-excerpt {
+	height: 90px;
+	display: flex;
+	align-items: center;
 }

@@ -44,12 +44,13 @@ nav {
 	position: absolute;
 	background: var(--nav-background-color);
 	width: 100%;
-	z-index: 1000;
+	z-index: 10000;
 }
 nav a {
 	display: block;
 	padding: 0.5rem 1rem;
 	color: var(--nav-a-color);
+	margin: 1rem;
 }
 .footer-navigation {
 	padding-left: 1rem;
@@ -69,6 +70,9 @@ nav a {
 		justify-content: space-around;
 		max-width: 80%;
 	}
+	nav a {
+		margin: 0;
+	}
 	.menu-label {
 		display: none;
 	}
@@ -79,6 +83,10 @@ nav a {
 		display: flex;
 		height: fit-content;
 		justify-content: center;
+		margin: 0;
+	}
+	nav a {
+		margin: 0;
 	}
 	.menu-label {
 		display: none;
