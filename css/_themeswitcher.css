@@ -10,7 +10,7 @@
 	position: relative;
 	transform: var(--default-border-radius);
 	width: 6rem;
-	z-index: 10000;
+	z-index: 1001;
 }
 #theme-switcher::before {
 	content: "";

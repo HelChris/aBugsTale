@@ -65,7 +65,6 @@ footer {
 	--hover-shadow-color: 0.3px 0.3px 0.3px #3d3b3b;
 
 	--container-background: rgba(95, 134, 99, 0.3);
-	/* --newsletter-container-background: rgba(255, 255, 255, 0.3); */
 
 	--story-background: #eef5ee;
 	--newsletter-background: #eef5ee;
@@ -75,6 +74,9 @@ footer {
 	--border-radius: 8px;
 	--border-radius-image: 10px 10px 0 0;
 	--postcard-background: #fff;
+	--badge-color: #205c20;
+	--badge-background: #d6f8d6;
+
 	--button-font-color: #000;
 	--accent-color: #7dba7f;
 	--shadow: #00000075;
@@ -104,7 +106,6 @@ footer {
 	--main-background-image: url("/images/painted-solid-concrete-wall-textured-background.jpg");
 	--image-logo: url("/images/logo-dark.png");
 
-
 	--header-nav-switch-background: #669c85;
 	--nav-background-color: #669c85;
 	--footer-background: #669c85;
@@ -113,15 +114,17 @@ footer {
 
 	--container-background: #669c8580;
 	/* --newsletter-container-background: #669c8550; */
-	--newsletter-background: #669c8550;;
+	--newsletter-background: #669c8550;
 	--story-background: hsla(129, 11%, 35%, 0.3);
 	--story-paragraph-color: #e1e1e1;
 
 	--postcard-border: 1px solid #000;
 	--border-radius: 8px;
 	--border-radius-image: 10px 10px 0 0;
-	/* --postcard-background: hsla(126, 17%, 45%, 0.3); */
-	--postcard-background: hsla(129, 11%, 35%, 0.3);
+	--postcard-background: hsla(0, 0%, 23%, 0.3);
+	--postcard-border-color: #205c20;
+	--badge-color: #205c20;
+	--badge-background: #d6f8d6;
 	--font-color: #fff;
 	--button-font-color: #000;
 	--accent-color: #669c85;

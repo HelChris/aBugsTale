@@ -1,17 +1,8 @@
 body {
 	background-color: var(--body-background);
 }
-.nav-and-theme-switcher {
-	background-color: var(--header-nav-switch-background);
-}
-.nav-section {
-	background-color: var(--nav-background-color);
-}
-.container {
-	background-color: var(--container-background);
-}
-.newsletter-container {
-	background-color: var(--newsletter-container-background);
+.footer-wrapper {
+	background-color: var(--footer-background);
 }
 .page-h1 {
 	color: var(--h-color);
@@ -21,17 +12,21 @@ body {
 	display: flex;
 	margin: 0 auto;
 }
-.about-us-img {
-	max-width: 50vw;
-	border-radius: 1rem 0 1rem 0;
-	margin: 1rem;
+.nav-section {
+	background-color: var(--nav-background-color);
 }
-.story-image {
-	max-width: 90%;
-	display: flex;
-	margin: 0 auto;
-	padding-top: 1rem;
+.nav-and-theme-switcher {
+	background-color: var(--header-nav-switch-background);
 }
+/*** CONTAINERS ****/
+.container {
+	background-color: var(--container-background);
+}
+.newsletter-container {
+	background-color: var(--newsletter-container-background);
+	color: var(--font-color);
+}
+/**** INDEX PAGE *****/
 .img-link-about,
 .img-link-contact,
 .img-link-stories {
@@ -42,8 +37,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-shrink: 0;
-  margin: 1rem;
-
+	margin: 1rem;
 }
 .img-link-about {
 	background: url(/images/forest-small.jpg) lightgray 50% / cover no-repeat;
@@ -55,16 +49,42 @@ body {
 	background: url(/images/close-up-moss-nature-small.jpg) lightgray 50% / cover
 		no-repeat;
 }
-
+/****** CAROUSEL & BLOGPOSTS ******/
+.badge {
+	color: var(--badge-color);
+	background: var(--badge-background);
+}
+.card-link,
+.card-item,
+.post-card-wrapper {
+	color: var(--font-color);
+	background-color: var(--postcard-background);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+.card-link:hover,
+.post-card-wrapper:hover {
+	border-color: var(--postcard-border-color);
+}
+/**** ABOUT.HTML *****/
+.about-us-img {
+	max-width: 50vw;
+	border-radius: 1rem 0 1rem 0;
+	margin: 1rem;
+}
+.story-image {
+	max-width: 90%;
+	display: flex;
+	margin: 1rem auto;
+	border-radius: var(--border-radius-image);
+}
 .story-background {
 	background-color: var(--story-background);
 }
-
-/* ******* MODAL ******* */
+/* *** MODAL - STORY.HTML *** */
 .modal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
+	z-index: 2000; /* Sit on top */
 	padding-top: 100px; /* Location of the box */
 	left: 0;
 	top: 0;
@@ -74,20 +94,17 @@ body {
 	background-color: rgb(0, 0, 0); /* Fallback color */
 	background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
-
 .modal-content {
 	margin: auto;
 	display: block;
 	width: 80%;
 	max-width: 700px;
 }
-
 .modal-content,
 .modal {
 	animation-name: zoom;
 	animation-duration: 0.6s;
 }
-
 @keyframes zoom {
 	from {
 		transform: scale(0);
@@ -96,7 +113,6 @@ body {
 		transform: scale(1);
 	}
 }
-
 .modal-content:hover {
 	cursor: pointer;
 }

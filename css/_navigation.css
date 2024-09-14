@@ -44,7 +44,7 @@ nav {
 	position: absolute;
 	background: var(--nav-background-color);
 	width: 100%;
-	z-index: 10000;
+	z-index: 1000;
 }
 nav a {
 	display: block;

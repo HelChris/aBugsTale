@@ -88,6 +88,9 @@ footer a:hover {
 	font-size: 80px;
 	line-height: 0;
 }
+.post-card-content {
+	background: var(--blog-card);
+}
 .form-h1 {
 	color: var(--font-color);
 }
@@ -121,7 +124,6 @@ footer a:hover {
 }
 .story-title,
 .story-author,
-.date,
 .the-story {
 	color: var(--font-color);
 }
