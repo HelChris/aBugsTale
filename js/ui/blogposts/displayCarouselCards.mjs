@@ -6,8 +6,6 @@ export async function createCarouselCards(url) {
 		const cardWrapper = document.querySelector(".card-list");
 		cardWrapper.innerHTML = "";
 
-		console.log(`Number of slides: ${posts.length}`);
-
 		const latestPosts = posts
 			.sort((a, b) => new Date(b.date) - new Date(a.date))
 			.slice(0, 6);

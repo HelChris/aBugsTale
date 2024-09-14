@@ -36,7 +36,6 @@ switch (pathname) {
 		break;
 }
 
-//
 // EventListeners to update theme and logo on the pages
 //
 document.addEventListener("DOMContentLoaded", async () => {

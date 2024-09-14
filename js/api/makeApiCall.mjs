@@ -9,10 +9,8 @@ export async function makeApiCall(endpoint) {
 		const results = await response.json();
 		return results;
 
-		// console.log(results);
 	} catch (error) {
 		console.error(error);
 		throw error;
-		//resultsContainer.innerHTML = error;
 	}
 }

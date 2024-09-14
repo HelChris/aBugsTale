@@ -26,7 +26,7 @@ export function initializeFormValidation() {
 
 	function updateCounter(input, counter, minLength) {
 		const length = input.value.length;
-		counter.textContent = `${length}/${minLength} characters`;
+		counter.textContent = `${length}/${minLength}`;
 		if (length >= minLength) {
 			counter.classList.add("valid");
 			counter.classList.remove("invalid");
