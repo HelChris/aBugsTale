@@ -38,7 +38,7 @@ footer a:hover {
 }
 small {
 	font-size: 15px;
-	font-family: 'Times New Roman', Times, serif;
+	font-family: "Times New Roman", Times, serif;
 }
 .active {
 	text-decoration: underline;
@@ -144,4 +144,14 @@ small {
 	height: 90px;
 	display: flex;
 	align-items: center;
+}
+/***** FORM ******/
+.counter {
+	font-size: 0.9rem;
+}
+.counter.valid {
+	color: var(--success-color);
+}
+.counter.invalid {
+	color: var(--error-color);
 }

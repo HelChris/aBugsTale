@@ -10,6 +10,12 @@
 }
 .button:hover {
 	letter-spacing: 4px;
+	cursor: pointer;
+}
+.button:disabled,
+.button:disabled:hover {
+	background-color: var(--disabled-color);
+	cursor: not-allowed;
 }
 .top-button {
   display: flex;

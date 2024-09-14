@@ -81,8 +81,10 @@ footer {
 	--button-font-color: #000;
 	--accent-color: #7dba7f;
 	--shadow: #00000075;
-	--error-color: #cb1111;
+
+	--error-color: #B00020;
 	--success-color: #7dba7f;
+	--disabled-color: #79797990;
 
 	--h-color: #000;
 	--copy-color: #000;
@@ -121,9 +123,11 @@ footer {
 	--badge-background: #d6f8d6;
 	--font-color: #fff;
 	--button-font-color: #000;
+
 	--accent-color: #669c85;
-	--error-color: #a91212;
+	--error-color: #CF6679;
 	--success-color: #669c85;
+	--disabled-color: #79797990;
 
 	--h-color: #e1e1e1;
 	--copy-color: #ffffff;

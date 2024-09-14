@@ -6,6 +6,7 @@ import { fetchAndDisplaySinglePost } from "/js/events/fetchAndDisplaySinglePost.
 import { fetchAndDisplayBlogPosts } from "/js/events/fetchAndDisplayBlogPosts.mjs";
 
 import { createCarouselCards } from "/js/ui/blogposts/displayCarouselCards.mjs";
+import { initializeFormValidation } from "/js/events/validateForm.mjs";
 
 // what JS to run on which page
 const { pathname } = location;
@@ -15,7 +16,6 @@ switch (pathname) {
 	case "/":
 	case "/index":
 	case "/index.html":
-		// Call function to create carousel cards
 		createCarouselCards();
 		break;
 	case "/story":
@@ -29,6 +29,10 @@ switch (pathname) {
 	case "/about":
 	case "/about.html":
 		createCarouselCards();
+		break;
+	case "/contact":
+	case "/contact.html":
+		initializeFormValidation();
 		break;
 }
 

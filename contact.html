@@ -83,35 +83,30 @@
     </section>
   </header>
   <main>
-    <!-- REMEMBER TO USE JAVASCRIPT FOR VALIDATION AND SHOW ERROR MESSAGES IF VALUES IN THE TEXTBOXES DO NOT MEET THE REQUIREMENTS-->
     <div class="container">
-      <h1 class="form-h1">Contact us</h1>
-      <form action="" method="get" class="contact-form">
+      <h1 class="form-h1">Contact form</h1>
+      <form id="contactForm" action="" method="get" class="contact-form">
         <div class="form">
-          <label for="name">Name   <small>(minimum 5 characters)</small></label>
+          <label for="name">Name</label>
           <input type="text" name="name" id="name" placeholder="Your name" class="form-input" required minlength="5"
-            maxlength="20" required />
+            maxlength="20" />
         </div>
         <div class="form">
-          <label for="email">Email   <small>(required)</small></label>
+          <label for="email">Email</label>
           <input type="email" name="email" id="email" placeholder="name@example.com" class="form-input" required />
         </div>
         <div class="form">
-          <label for="subject">Subject   <small>(minimum 15 characters long)</small></label>
-          <input type="text" name="subject" id="subject" placeholder="this message is about.." class="form-input" required
-            minlength="15" required />
+          <label for="subject">Subject</label>
+          <input type="text" name="subject" id="subject" placeholder="this message is about.." class="form-input"
+            required minlength="15" />
         </div>
         <div class="form form-message-input">
-          <label for="message">Message   <small>(minimum 25 characters long)</small></label>
-          <textarea class="form-message-input" type="text" name="message" id="message" required minlength="25" required
+          <label for="message">Message</label>
+          <textarea class="form-input form-message" type="text" name="message" id="message" required minlength="25"
             placeholder="write something here.."></textarea>
         </div>
-        <div class="form">
-          <input class="contact-checkbox" type="checkbox" id="checkbox" />
-          <label for="checkbox">Yes, I would like to subscribe to the newsletter!</label>
-        </div>
-        <div class="form">
-          <input type="submit" value="Send" class="button" />
+        <div>
+          <button type="submit" class="button" disabled>Send</button>
         </div>
       </form>
     </div>
