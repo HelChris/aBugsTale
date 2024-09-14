@@ -85,10 +85,34 @@ export function initializeFormValidation() {
 	function submitForm(event) {
 		event.preventDefault();
 		// add the success-form class to the form
-		form.classList.add("success-form");
-		// replace the form content with a thank-you message
-		form.innerHTML = `<div class="success-message"><img src="images/success-icon.png" alt="success" class="success-icon"/><p class="success-p">Thank you. Your message has been sent.</p></div>`;
+    form.classList.add("success-form");
+    //clear the form content
+    while (form.firstChild) {
+      form.removeChild(form.firstChild);
+    }
+		// Create the container div
+		const successMessageDiv = document.createElement("div");
+		successMessageDiv.className = "success-message";
+
+		// Create the image element
+		const successIcon = document.createElement("img");
+		successIcon.src = "images/success-icon.png";
+		successIcon.alt = "success";
+		successIcon.className = "success-icon";
+
+		// Create the paragraph element
+		const successParagraph = document.createElement("p");
+		successParagraph.className = "success-p";
+		successParagraph.textContent = "Thank you. Your message has been sent.";
+
+		// Append the image and paragraph to the container div
+		successMessageDiv.appendChild(successIcon);
+		successMessageDiv.appendChild(successParagraph);
+
+		// Append the container div to the form
+		form.appendChild(successMessageDiv);
 	}
+
 	form.addEventListener("submit", submitForm);
 
 	// function to check if the length of the input value is valid
