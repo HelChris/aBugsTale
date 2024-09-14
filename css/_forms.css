@@ -16,6 +16,7 @@ textarea {
 	border: 1px solid transparent;
 	border-radius: var(--border-radius);
 	padding: 1rem 0.5rem;
+
 }
 .form-input:focus,
 textarea:focus {
@@ -30,4 +31,10 @@ textarea:focus {
 	flex-direction: column;
 	font-family: "montserrat", sans-serif;
 	font-size: 18px;
+}
+.contact-checkbox {
+	caret-color: var(--accent-color);
+}
+.contact-checkbox:checked {
+	color: var(--accent-color);
 }
