@@ -83,6 +83,9 @@ body {
 .story-background {
 	background-color: var(--story-background);
 }
+.about-newsletter {
+	background-color: var(--about-newsletter-background);
+}
 /* *** MODAL - STORY.HTML *** */
 .modal {
 	display: none; /* Hidden by default */

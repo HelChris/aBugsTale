@@ -65,6 +65,7 @@ footer {
 	--hover-shadow-color: 0.3px 0.3px 0.3px #3d3b3b;
 
 	--container-background: rgba(95, 134, 99, 0.3);
+	--about-newsletter-background: #669c85;
 
 	--story-background: #eef5ee;
 	--box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
@@ -106,7 +107,7 @@ footer {
 	--hover-shadow-color: 0.5px 0.5px 0.5px #3d3b3b;
 
 	--container-background: #669c8580;
-	/* --newsletter-container-background: #669c8550; */
+	--about-newsletter-background: #2b4339;
 	--newsletter-background: #669c8550;
 	--story-background: hsla(129, 11%, 35%, 0.3);
 	--story-paragraph-color: #e1e1e1;
