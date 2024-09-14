@@ -64,6 +64,10 @@ footer a:hover {
 .index-h1 {
 	padding-top: 1rem;
 }
+.form-h1,
+.about-h1 {
+	color: var(--font-color);
+}
 .about-h {
 	padding-bottom: 0.5rem;
 	margin-top: 0;
@@ -90,9 +94,6 @@ footer a:hover {
 }
 .post-card-content {
 	background: var(--blog-card);
-}
-.form-h1 {
-	color: var(--font-color);
 }
 .h2-img-link {
 	backdrop-filter: blur(5px) contrast(50%) brightness(30%);

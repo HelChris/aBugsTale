@@ -22,8 +22,11 @@ body {
 .container {
 	background-color: var(--container-background);
 }
+.container-about {
+	background-color: var(--body-background);
+}
 .newsletter-container {
-	background-color: var(--newsletter-container-background);
+	background-color: var(--container-background);
 	color: var(--font-color);
 }
 /**** INDEX PAGE *****/

@@ -26,6 +26,10 @@ switch (pathname) {
 	case "/stories.html":
 		fetchAndDisplayBlogPosts();
 		break;
+	case "/about":
+	case "/about.html":
+		createCarouselCards();
+		break;
 }
 
 //
