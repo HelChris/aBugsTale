@@ -36,6 +36,10 @@ footer a:hover {
 	text-decoration: underline;
 	text-shadow: var(--hover-shadow-color);
 }
+small {
+	font-size: 15px;
+	font-family: 'Times New Roman', Times, serif;
+}
 .active {
 	text-decoration: underline;
 }

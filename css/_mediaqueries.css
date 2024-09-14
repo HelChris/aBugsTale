@@ -50,6 +50,10 @@
 		max-width: 50%;
 		margin: 0 auto;
 	}
+	.about-p {
+		max-width: 80%;
+		margin: 0 auto;
+	}
 	.the-story {
 		max-width: 50%;
 	}

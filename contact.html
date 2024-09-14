@@ -88,23 +88,23 @@
       <h1 class="form-h1">Contact us</h1>
       <form action="" method="get" class="contact-form">
         <div class="form">
-          <label for="name">Enter your name:</label>
-          <input type="text" name="name" id="name" placeholder="Name" class="form-input" required minlength="5"
+          <label for="name">Name   <small>(minimum 5 characters)</small></label>
+          <input type="text" name="name" id="name" placeholder="Your name" class="form-input" required minlength="5"
             maxlength="20" required />
         </div>
         <div class="form">
-          <label for="email">Enter your email:</label>
-          <input type="email" name="email" id="email" placeholder="email@example.com" class="form-input" required />
+          <label for="email">Email   <small>(required)</small></label>
+          <input type="email" name="email" id="email" placeholder="name@example.com" class="form-input" required />
         </div>
         <div class="form">
-          <label for="subject">Subject:</label>
-          <input type="text" name="subject" id="subject" placeholder="the subject" class="form-input" required
+          <label for="subject">Subject   <small>(minimum 15 characters long)</small></label>
+          <input type="text" name="subject" id="subject" placeholder="this message is about.." class="form-input" required
             minlength="15" required />
         </div>
         <div class="form form-message-input">
-          <label for="message">Message:</label>
+          <label for="message">Message   <small>(minimum 25 characters long)</small></label>
           <textarea class="form-message-input" type="text" name="message" id="message" required minlength="25" required
-            placeholder="write your message here.."></textarea>
+            placeholder="write something here.."></textarea>
         </div>
         <div class="form">
           <input class="contact-checkbox" type="checkbox" id="checkbox" />
