@@ -46,6 +46,10 @@
 	.story-image {
 		max-width: 50%;
 	}
+	.story-paragraph {
+		max-width: 70%;
+		margin: 0 auto;
+	}
 	.the-story {
 		max-width: 50%;
 	}
