@@ -63,54 +63,39 @@ document.addEventListener("DOMContentLoaded", async () => {
 		});
 	}
 
-	// Event listener for the menu checkbox
-	const menuCheckbox = document.getElementById("menu-checkbox");
+	// Event listener for the menu button
+	const menuButton = document.getElementById("menu-button");
 	const mainNavigation = document.getElementById("main-navigation");
 
-	if (menuCheckbox) {
+	if (menuButton) {
 		// Add change event listener for accessibility
-		menuCheckbox.addEventListener("change", function () {
-			if (menuCheckbox.checked) {
-				menuCheckbox.setAttribute("aria-expanded", "true");
-				// Move focus to first focusable element
+		menuButton.addEventListener("click", function () {
+			const expanded = menuButton.getAttribute("aria-expanded") === "true";
+			menuButton.setAttribute("aria-expanded", !expanded);
+			// Move focus to first focusable element
+			if (!expanded) {
 				const firstFocusableElement = mainNavigation.querySelector("a");
 				if (firstFocusableElement) {
 					firstFocusableElement.focus();
 				}
 			} else {
-				menuCheckbox.setAttribute("aria-expanded", "false");
-				// Move focus back to toggle button
-				menuCheckbox.focus();
+				//move focus back to toggle button
+				menuButton.focus();
 			}
 		});
 
 		// Add keyboard event listener for accessibility
-		menuCheckbox.addEventListener("keydown", function (event) {
+		menuButton.addEventListener("keydown", function (event) {
 			// Check if Enter or Space is pressed
 			if (event.key === "Enter" || event.key === " ") {
 				// Prevent the default action to avoid scrolling when pressing space
 				event.preventDefault();
-				// Toggle the checkbox state
-				menuCheckbox.checked = !menuCheckbox.checked;
-				// Dispatch the change event to trigger the change listener
-				menuCheckbox.dispatchEvent(new Event("change"));
+				// toggle button state
+				menuButton.click();
 			}
 		});
 	}
-
-	// Event listener for the label to toggle the menu
-	const menuLabel = document.querySelector(".menu-label");
-	if (menuLabel) {
-		menuLabel.addEventListener("keydown", function (event) {
-			if (event.key === "Enter" || event.key === " ") {
-				event.preventDefault();
-				menuCheckbox.checked = !menuCheckbox.checked;
-				menuCheckbox.dispatchEvent(new Event("change"));
-			}
-		});
-	}
-
-	// Handle focus styles
+	// handle focus styles
 	function handleFirstTab(event) {
 		if (event.key === "Tab") {
 			document.body.classList.add("user-is-tabbing");
@@ -124,6 +109,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 		window.removeEventListener("mousedown", handleMouseDownOnce);
 		window.addEventListener("keydown", handleFirstTab);
 	}
-
 	window.addEventListener("keydown", handleFirstTab);
+
 });

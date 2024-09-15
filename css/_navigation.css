@@ -7,35 +7,53 @@
 	display: flex;
 	align-items: center;
 }
-nav,
-#menu-checkbox {
+nav {
 	display: none;
 }
-#menu-checkbox:checked ~ nav {
-	display: block;
+.nav-button {
+	margin: 1rem;
+	border: none;
+	border-radius: 100px;
+	align-content: center;
+	background-color: var(--switch-bg);
+	color: var(--font-color);
 }
 .menu-icon {
 	margin: 0.5rem;
 	cursor: pointer;
 	outline: none;
+	width: 1.5em;
+	height: 1.5em;
 }
+.menu-icon-path {
+	fill: none;
+	stroke: currentColor;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 1.7px;
+}
+.close-icon .menu-icon-path {
+	fill: currentColor;
+	stroke: none;
+}
+
 /* Show outline only when using keyboard navigation */
 .user-is-tabbing .menu-icon:focus {
-	outline: 2px solid #000; /* or any other style you prefer */
+	outline: 2px solid #000;
 }
 .close-icon {
 	display: none;
 }
-#menu-checkbox:checked + .menu-label .open-icon {
+#menu-button[aria-expanded="true"] .open-icon {
 	display: none;
 }
-#menu-checkbox:checked + .menu-label .close-icon {
+#menu-button[aria-expanded="true"] .close-icon {
 	display: inline;
 }
-#menu-checkbox:checked ~ nav {
+#menu-button[aria-expanded="true"] ~ nav {
 	display: block;
 }
-#menu-checkbox:checked ~ nav a {
+#menu-button[aria-expanded="true"] ~ nav a {
 	display: block;
 	padding: 0.5rem 1rem;
 	color: var(--nav-a-color);
