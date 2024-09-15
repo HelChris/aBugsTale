@@ -15,8 +15,7 @@ nav {
 	border: none;
 	border-radius: 100px;
 	align-content: center;
-	background-color: var(--switch-bg);
-	color: var(--font-color);
+	background-color: var(--nav-background-color);
 }
 .menu-icon {
 	margin: 0.5rem;
