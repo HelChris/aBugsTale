@@ -95,6 +95,11 @@ nav a {
 	.menu-label {
 		display: none;
 	}
+	.nav-button {
+		display: none;
+		visibility: hidden;
+		pointer-events: none;
+	}
 }
 /* ******** LARGE SCREEN ******** */
 @media (min-width: 43rem) {
@@ -109,5 +114,10 @@ nav a {
 	}
 	.menu-label {
 		display: none;
+	}
+	.nav-button {
+		display: none;
+		visibility: hidden;
+		pointer-events: none;
 	}
 }
