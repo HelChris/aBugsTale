@@ -85,11 +85,11 @@ export function initializeFormValidation() {
 	function submitForm(event) {
 		event.preventDefault();
 		// add the success-form class to the form
-    form.classList.add("success-form");
-    //clear the form content
-    while (form.firstChild) {
-      form.removeChild(form.firstChild);
-    }
+		form.classList.add("success-form");
+		//clear the form content
+		while (form.firstChild) {
+			form.removeChild(form.firstChild);
+		}
 		// Create the container div
 		const successMessageDiv = document.createElement("div");
 		successMessageDiv.className = "success-message";
@@ -122,7 +122,8 @@ export function initializeFormValidation() {
 
 	function validateEmail(email) {
 		const regEx = /\S+@\S+\.\S+/;
-		return regEx.test(email);
+		const patternMatches = regEx.test(email);
+		return patternMatches;
 	}
 
 	// initialize counters
