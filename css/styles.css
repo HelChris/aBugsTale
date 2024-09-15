@@ -99,7 +99,6 @@ footer {
 
 :root[data-theme="dark"] {
 	--body-background: #222;
-	--main-background-image: url("/images/painted-solid-concrete-wall-textured-background.jpg");
 	--image-logo: url("/images/logo-dark.png");
 
 	--header-nav-switch-background: #669c85;
