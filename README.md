@@ -1,7 +1,4 @@
 
-![Logo](/images/screenshot-logo.png)
-
-
 # Examn 1: A Bug's Tale
 
 My first examn project -  creating a blog with all the skills I've learned over the first year of studies.
