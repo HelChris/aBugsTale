@@ -27,7 +27,8 @@ HTML, CSS modules, JavaScript, Local, WordPress REST API, Figjam, Figma, AI
 - research blogs, sketch wireframes, sitemap and personas
 - create highfidelity prototype in Figma
 - generate stories/fairytales and images with AI
-- build site with HTML, CSS, JS
+- build site with HTML, CSS, JS locally
+- add content to WordPress CMS, use WP REST API to fetch content
 - check responsiveness of site, add favicon
 - validate, check accessibility/ARIA/WCAG
 - deploy with Netlify
