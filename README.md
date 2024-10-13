@@ -1,5 +1,5 @@
 
-![Logo](/images/logo-light.png)
+![Logo](/images/screenshot-logo.png)
 
 
 # Examn 1: A Bug's Tale
