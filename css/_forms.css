@@ -15,6 +15,7 @@ input,
 textarea {
 	box-shadow: 0 0 1rem transparent;
 	outline: 2px solid transparent;
+	border-radius: var(--border-radius);
 }
 input.valid:focus,
 textarea.valid:focus {

@@ -5,12 +5,11 @@ import { updateLogo } from "/js/ui/shared/switchLogoToTheme.mjs";
 import { fetchAndDisplaySinglePost } from "/js/events/fetchAndDisplaySinglePost.mjs";
 import { fetchAndDisplayBlogPosts } from "/js/events/fetchAndDisplayBlogPosts.mjs";
 
-import { createCarouselCards } from "/js/ui/blogposts/displayCarouselCards.mjs";
+import { createCarouselCards } from "/js/ui/blogPosts/displayCarouselCards.mjs";
 import { initializeFormValidation } from "/js/events/validateForm.mjs";
 
 // what JS to run on which page
 const { pathname } = location;
-console.log(pathname);
 
 switch (pathname) {
 	case "/":

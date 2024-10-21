@@ -1,5 +1,5 @@
 import { fetchBlogPostInfo } from "/js/events/fetchBlogPostInfo.mjs";
-import { displayBlogPostCard } from "/js/ui/blogposts/displayBlogPostCards.mjs";
+import { displayBlogPostCard } from "/js/ui/blogPosts/displayBlogPostCards.mjs";
 
 export async function fetchAndDisplayBlogPosts() {
 	// Fetch and display blog posts in posts container

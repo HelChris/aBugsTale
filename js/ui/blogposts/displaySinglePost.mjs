@@ -1,18 +1,15 @@
 import { fetchBlogPostInfo } from "/js/events/fetchBlogPostInfo.mjs";
 
 export async function createModalImage(imgElement) {
-	// modal container
 	const modal = document.createElement("div");
 	modal.className = "modal";
 	document.body.appendChild(modal);
 
-	// create modal image
 	const modalImg = document.createElement("img");
 	modalImg.className = "modal-content";
 	modalImg.alt = "";
 	modal.appendChild(modalImg);
 
-	// create modal alt text container
 	const modalAltText = document.createElement("div");
 	modalAltText.className = "modal-alt-text";
 	modal.appendChild(modalAltText);
@@ -45,29 +42,25 @@ export function displaySinglePost(post) {
 	const singleStoryWrapper = document.createElement("div");
 	singleStoryWrapper.className = "single-story-wrapper single-post-story";
 
-	// story image
 	const img = document.createElement("img");
 	img.src = post.featuredImage;
 	img.alt = post.title;
 	img.className = "story-image";
 	singleStoryWrapper.appendChild(img);
 
-	// create modal image
 	createModalImage(img);
 
-	// title
 	const title = document.createElement("h1");
 	title.textContent = post.title;
 	title.className = "story-title";
 	singleStoryWrapper.appendChild(title);
 
-	// author
 	const author = document.createElement("p");
 	author.textContent = `By author: ${post.author}`;
 	author.className = "story-author";
 	singleStoryWrapper.appendChild(author);
 
-	// date
+
 	const date = document.createElement("p");
 	date.className = "date";
 	const formattedDate = new Date(post.date)
@@ -97,7 +90,6 @@ export function displaySinglePost(post) {
 	// append story-wrapper to single-story-wrapper
 	singleStoryWrapper.appendChild(storyWrapper);
 
-	// link button
 	const linkButton = document.createElement("a");
 	linkButton.href = "/stories.html";
 	linkButton.className = "button";
@@ -107,6 +99,5 @@ export function displaySinglePost(post) {
 	// append single story-wrapper to main container
 	singleStoryPage.appendChild(singleStoryWrapper);
 
-	// return main container
 	return singleStoryPage;
 }

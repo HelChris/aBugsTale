@@ -1,5 +1,4 @@
 import { makeApiCall } from "/js/api/makeApiCall.mjs";
-// import { cleanText } from "../helpers/cleanText.mjs";
 
 export async function fetchBlogPostInfo(url) {
 	try {

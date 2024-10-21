@@ -1,5 +1,5 @@
 import { fetchBlogPostInfo } from "/js/events/fetchBlogPostInfo.mjs";
-import { displaySinglePost } from "/js/ui/blogposts/displaySinglePost.mjs";
+import { displaySinglePost } from "/js/ui/blogPosts/displaySinglePost.mjs";
 
 export async function fetchAndDisplaySinglePost() {
 	const location = document.location.search;
@@ -19,7 +19,6 @@ export async function fetchAndDisplaySinglePost() {
 			throw new Error("Posts not found or invalid response format");
 		}
 
-		//find the post with matching id
 		const post = posts.find((p) => p.id === parseInt(idCall, 10));
 
 		//change the title of the document according to the post
@@ -34,7 +33,6 @@ export async function fetchAndDisplaySinglePost() {
 			throw new Error("Post not found");
 		}
 
-		//use displaysinglepost to ceate post HTML:
 		const singlePostElement = displaySinglePost(post);
 		const resultsContainer = document.getElementById("single-story-page");
 		resultsContainer.innerHTML = "";

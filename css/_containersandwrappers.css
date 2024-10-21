@@ -35,7 +35,9 @@
 	display: flex;
 }
 .newsletter-wrapper {
-	padding: 2rem;
+	padding-top: 2rem;
+	padding-bottom: 0.5rem;
+	align-items: baseline;
 }
 .footer-wrapper {
 	display: flex;

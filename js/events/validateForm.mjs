@@ -61,7 +61,6 @@ export function initializeFormValidation() {
 
 	function checkIfButtonIsDisabled() {
 		updateCounters();
-		// if all inputs pass validation enable the button
 		if (
 			checkLength(name.value, 5) &&
 			validateEmail(email.value) &&
@@ -70,7 +69,6 @@ export function initializeFormValidation() {
 		) {
 			button.disabled = false;
 		} else {
-			// disable button
 			button.disabled = true;
 		}
 	}
@@ -84,7 +82,6 @@ export function initializeFormValidation() {
 	// function to run when the form is submitted
 	function submitForm(event) {
 		event.preventDefault();
-		// add the success-form class to the form
 		form.classList.add("success-form");
 		//clear the form content
 		while (form.firstChild) {
@@ -94,28 +91,23 @@ export function initializeFormValidation() {
 		const successMessageDiv = document.createElement("div");
 		successMessageDiv.className = "success-message";
 
-		// Create the image element
 		const successIcon = document.createElement("img");
 		successIcon.src = "images/success-icon.png";
 		successIcon.alt = "success";
 		successIcon.className = "success-icon";
 
-		// Create the paragraph element
 		const successParagraph = document.createElement("p");
 		successParagraph.className = "success-p";
 		successParagraph.textContent = "Thank you. Your message has been sent.";
 
-		// Append the image and paragraph to the container div
 		successMessageDiv.appendChild(successIcon);
 		successMessageDiv.appendChild(successParagraph);
 
-		// Append the container div to the form
 		form.appendChild(successMessageDiv);
 	}
 
 	form.addEventListener("submit", submitForm);
 
-	// function to check if the length of the input value is valid
 	function checkLength(value, len) {
 		return value.trim().length >= len;
 	}
@@ -126,6 +118,5 @@ export function initializeFormValidation() {
 		return patternMatches;
 	}
 
-	// initialize counters
 	updateCounters();
 }
