@@ -5,7 +5,7 @@ My first examn project -  creating a blog with all the skills I've learned over 
 
 I started the project locally, then moved all my files over to WordPress and created my own WP REST API to fetch my data to my website. I've built my blog with HTML, CSS and Javascript both to create a dynamic site and for validation.
 
-I've used AI to generate the blogs content, bot the fairytales and the images. I've used CSS modules, implemented light/dark mode and Netlify is used to deploy the site. (https://hch-exam1.netlify.app/)
+I've used AI to generate the blogs content, both the fairytales and the images. I've used CSS modules, implemented light/dark mode and Netlify is used to deploy the site. (https://hch-exam1.netlify.app/)
 
 
 ## Screenshots
