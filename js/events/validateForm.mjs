@@ -74,10 +74,10 @@ export function initializeFormValidation() {
 	}
 
 	// call the same function for each input's keyup event
-	name.addEventListener("keyup", checkIfButtonIsDisabled);
-	email.addEventListener("keyup", checkIfButtonIsDisabled);
-	subject.addEventListener("keyup", checkIfButtonIsDisabled);
-	message.addEventListener("keyup", checkIfButtonIsDisabled);
+	if (name) name.addEventListener("keyup", checkIfButtonIsDisabled);
+	if (email) email.addEventListener("keyup", checkIfButtonIsDisabled);
+	if (subject) subject.addEventListener("keyup", checkIfButtonIsDisabled);
+	if (message) message.addEventListener("keyup", checkIfButtonIsDisabled);
 
 	// function to run when the form is submitted
 	function submitForm(event) {
@@ -90,12 +90,10 @@ export function initializeFormValidation() {
 		// Create the container div
 		const successMessageDiv = document.createElement("div");
 		successMessageDiv.className = "success-message";
-
 		const successIcon = document.createElement("img");
 		successIcon.src = "images/success-icon.png";
 		successIcon.alt = "success";
 		successIcon.className = "success-icon";
-
 		const successParagraph = document.createElement("p");
 		successParagraph.className = "success-p";
 		successParagraph.textContent = "Thank you. Your message has been sent.";
