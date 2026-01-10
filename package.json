@@ -1,5 +1,22 @@
 {
+  "name": "a-bugs-tale",
+  "version": "1.0.0",
+  "description": "A blog about bugs and stories",
+  "main": "index.js",
+  "engines": {
+    "node": ">=22.18.0",
+    "npm": ">=10.7.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "blog",
+    "stories"
+  ],
+  "author": "",
   "devDependencies": {
-    "eslint": "^9.9.1"
+    "eslint": "^9.39.2"
   }
 }
